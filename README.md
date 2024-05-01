@@ -1,36 +1,46 @@
-AI Chatbot with Gemini and Streamlit: README
-This project uses the Gemini large language model with the Streamlit framework to create an interactive AI chatbot application.
+# AI-Assisted Code Reviewer
 
-Features:
+This Streamlit app uses OpenAI's GPT-3 API to provide an AI-assisted code review. The app takes user-inputted code and offers suggestions for improvements or fixes. 
 
-User-friendly chat interface: Streamlit provides a chat-like interface for users to interact with the AI chatbot seamlessly.
-Gemini integration: Leverages the powerful Gemini-1.5-pro-latest model for generating responses to user prompts.
-Contextual conversation: The chatbot maintains conversation history, allowing it to understand the context and respond more accurately.
-Error handling: The code includes exception handling to gracefully handle API errors or other issues.
-Requirements:
+## Setup and Installation
 
-Python 3.7+
-Streamlit
-google-generativeai
-A Gemini API key (replace "Geminiapi_key" placeholder with your actual key)
-Installation:
+1. Fork this repository.
+2. Create a new file named `api_key.txt` in the `keys` directory. 
+3. Obtain an API key from OpenAI and paste it into the `api_key.txt` file. You can sign up and obtain a key from [here](https://openai.com/api/).
+4. Install the required Python packages:
+   ```
+   pip install -r requirements.txt
+   ```
 
-Clone this repository or download the code.
-Install the required libraries: pip install streamlit google-generativeai
-Set your Gemini API key in the environment variable GEMINI_API_KEY.
-Usage:
+5. Run the Streamlit app:
+   ```
+   streamlit run app.py
+   ```
 
-Run the application: streamlit run your_script_name.py
-Start chatting with the AI in the Streamlit interface.
-Code Overview:
+## Usage
 
-generate_response(user_prompt): This function sends the user's prompt to the Gemini model and returns the generated response.
-main(): Sets up the Streamlit interface, handles user input, displays the conversation history, and calls generate_response to get AI responses.
-Customization:
+- Launch the app and you will see a text area where you can enter your code.
+- Select the programming language of your code from the dropdown menu.
+- Click the "Generate" button to get an AI-assisted review of your code.
 
-System instructions: Modify the system_instruction parameter in the GenerativeModel constructor to change the AI's persona and behavior.
-Model version: Explore different Gemini model versions available in the GenerativeModel constructor for varied response styles and capabilities.
-Additional Notes:
+## Supported Languages
 
-Ensure you have a valid Gemini API key and sufficient quota to use the model.
-This code provides a basic framework. Extend it with features like user authentication, different chatbots, or more complex conversation flows.
+- Python
+- JavaScript
+- Java
+- C#
+
+## Contributing
+
+Pull requests are welcome! Please follow the standard fork-and-pull workflow:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a pull request.
+
+Please ensure that your code follows the existing style and format, and that your changes do not break the existing functionality. 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
